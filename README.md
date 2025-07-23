@@ -8,28 +8,46 @@ Open3D를 활용해 포인트 클라우드 처리, 정합, 노이즈 제거, 메
 
 ## 폴더 구조 및 파일 설명
 
-3D_foot_scanner/  
-├── arduino/  
-│   └── esp32-button-motor-tracker-wifi.ino       # ESP32 기반 모터 제어 및 버튼 입력, Wi-Fi 통신 아두이노 코드  
-├── config/  
-│   └── config.yaml                               # 주요 파라미터 및 경로 설정 파일  
-├── data/                                         # 스캔된 원본 및 처리된 데이터 저장 폴더  
-├── src/  
-│   ├── capture/  
-│   │   └── realsense_capture.py                  # RealSense 카메라 캡처 관련 코드  
-│   ├── processing/  
-│   │   ├── filter.py                             # 포인트 클라우드 거리 및 y축 필터링  
-│   │   ├── merge.py                              # 여러 포인트 클라우드 정합 및 병합  
-│   │   ├── mesh_reconstruction.py                # Poisson 메시 생성  
-│   │   ├── noise_removal.py                      # 배경색 제거 및 DBSCAN 기반 노이즈 제거  
-│   │   └── transform.py                          # 회전 및 변환 처리 코드  
-│   └── utils/  
-│           ├── config_loader.py                      # YAML 설정 파일 로드 및 경로 설정  
-│           └── file_utils.py                         # 폴더 생성, 파일 경로 관리 등 유틸리티 함수  
-├── main.py                                       # 프로젝트 메인 실행 파일  
-├── environment.yml                               # Anaconda 환경 설정 파일  
-├── requirements.txt                              # Python 패키지 의존성 리스트  
-└── README.md                                     # 프로젝트 개요 및 설명 문서  
+## 프로젝트 폴더 구조 및 파일 설명
+
+- 3D_foot_scanner/
+  - arduino/
+    - esp32-button-motor-tracker-wifi.ino  
+      (ESP32 기반 모터 제어 및 버튼 입력, Wi-Fi 통신 아두이노 코드)
+  - config/
+    - config.yaml  
+      (주요 파라미터 및 경로 설정 파일)
+  - data/  
+    (스캔된 원본 및 처리된 데이터 저장 폴더)
+  - src/
+    - capture/
+      - realsense_capture.py  
+        (RealSense 카메라 캡처 관련 코드)
+    - processing/
+      - filter.py  
+        (포인트 클라우드 거리 및 y축 필터링)
+      - merge.py  
+        (여러 포인트 클라우드 정합 및 병합)
+      - mesh_reconstruction.py  
+        (Poisson 메시 생성)
+      - noise_removal.py  
+        (배경색 제거 및 DBSCAN 기반 노이즈 제거)
+      - transform.py  
+        (회전 및 변환 처리 코드)
+    - utils/
+      - config_loader.py  
+        (YAML 설정 파일 로드 및 경로 설정)
+      - file_utils.py  
+        (폴더 생성, 파일 경로 관리 등 유틸리티 함수)
+  - main.py  
+    (프로젝트 메인 실행 파일)
+  - environment.yml  
+    (Anaconda 환경 설정 파일)
+  - requirements.txt  
+    (Python 패키지 의존성 리스트)
+  - README.md  
+    (프로젝트 개요 및 설명 문서)
+
 
 ---
 
